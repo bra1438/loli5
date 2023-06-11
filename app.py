@@ -15,5 +15,4 @@ st.title("Arabic Letter Pronunciation")
 
 letter = st.text_input("Enter an Arabic letter:")
 
-if letter:
-    pronounce_arabic_letter_with_vowel(letter)
+pronounce_arabic_letter_with_vowel(letter)
