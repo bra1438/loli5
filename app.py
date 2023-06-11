@@ -25,3 +25,5 @@ def pronounce_arabic_letter_with_vowel(letter, vowel):
 st.title("تعليم نطق الخروف العربية ")
 
 letter = st.text_input("ادخل الحرف:")
+if letter:
+    pronounce_arabic_letter_with_vowel(letter, vowel)
