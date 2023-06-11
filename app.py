@@ -1,7 +1,7 @@
 import streamlit as st
 from gtts import gTTS
 
-vowels = ["ا", "و", "ي"]
+vowels = ["ا", "و", "ى"]
 
 def pronounce_arabic_letter_with_vowel(letter, vowel):
     tts = gTTS(text=letter + vowel, lang='ar')
