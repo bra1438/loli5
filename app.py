@@ -7,9 +7,9 @@ def pronounce_arabic_letters(letters):
         tts.save("output.mp3")
         st.audio("output.mp3")
 
-st.title("Arabic Letter Pronunciation")
+st.title("تعليم نطق الخروف العربية ")
 
-letter = st.text_input("Enter an Arabic letter:")
+letter = st.text_input("ادخل الحرف:")
 
 if letter:
     pronounce_arabic_letters(letter)
