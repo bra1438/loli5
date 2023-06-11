@@ -8,15 +8,16 @@ def pronounce_arabic_letter_with_vowel(letter, vowel):
     tts.save(f"file_{vowel}.mp3")
     st.audio(f"file_{vowel}.mp3")
 
-st.title("Arabic Letter Pronunciation")
+st.title("تعليم النطق للحروف العربية")
 
 # Create a list of Arabic letters
 arabic_letters = ["ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"]
 
 # Create a dropdown list with the Arabic letters
-letter_dropdown = st.selectbox("Select an Arabic letter", arabic_letters)
+letter_dropdown = st.selectbox("اختر احد الحروف", arabic_letters)
 
 # If a letter is selected, pronounce it with all three vowels
 if letter_dropdown:
     for vowel in vowels:
+        st.write(f"You selected the Arabic letter: {letter_dropdown}")
         pronounce_arabic_letter_with_vowel(letter_dropdown, vowel)
