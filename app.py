@@ -26,3 +26,4 @@ letter_dropdown = st.selectbox("Select an Arabic letter", arabic_letters)
 # Print the selected Arabic letter
 if letter_dropdown:
     st.write(f"You selected the Arabic letter: {letter_dropdown}")
+    pronounce_arabic_letter_with_vowel(letter_dropdown, vowel)
