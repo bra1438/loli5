@@ -14,7 +14,7 @@ letter = st.text_input("Enter an Arabic letter:")
 
 if letter:
     for vowel in vowels:
-        pronounce_arabic_letter_with_vowel(letter, vowel)
+        pronounce_arabic_letter_with_vowel(letter_dropdown, vowel)
 
         
 # Create a list of Arabic letters
