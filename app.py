@@ -6,8 +6,7 @@ from gtts import gTTS
 
 vowels = ["ا", "و", "ي"]
 def pronounce_arabic_letter_with_vowel(letter, vowel):
-    for letter in letters:
-        for vowel in vowels:
+    for vowel in vowels:
             tts = gTTS(text=letter + vowel, lang='ar')
             tts.save(f"file_{vowel}.mp3")
             st.audio(f"file_{vowel}.mp3")
