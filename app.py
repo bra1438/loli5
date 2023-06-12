@@ -4,6 +4,9 @@ from PIL import Image
 
 st.title("تعليم اللغة العربية")
 
+st.subheader('تقسيم حروف الكلمة')
+image = 'ar.jpg
+
 # Load the image
 image = Image.open("ar.jpg", width=500)
 
