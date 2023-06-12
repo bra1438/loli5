@@ -69,5 +69,5 @@ arabic_letters = st.multiselect("Select an Arabic letter:", ["أ", "ب", "ت", "
 if arabic_letters:
     for letter in arabic_letters:
         tts = gTTS(text=letter, lang='ar')
-          tts.save("letter.mp3")
-          st.audio("letter.mp3")
+        tts.save("letter.mp3")
+        st.audio("letter.mp3")
