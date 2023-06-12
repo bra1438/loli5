@@ -1,10 +1,16 @@
 import streamlit as st
 from gtts import gTTS
+from PIL import Image
+
+image = Image.open('sunrise.jpg')
 
 st.title("تعليم اللغة العربية")
 
+# Load the image
+image = Image.open("ar.jpg")
+
 # Display the image
-st.image("ar.jpg", width=100%)
+st.image(image)
 
 st.title("تقسيم حروف الكلمة")
       
