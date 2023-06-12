@@ -12,7 +12,8 @@ if word:
               tts = gTTS(text=char, lang='ar')
               tts.save(f"file_{char}.mp3")
               st.audio(f"file_{char}.mp3")
-
+                  
+      st.write("نطق الكلمة كاملة")
       tts = gTTS(text=word, lang='ar')
       tts.save("word.mp3")
       st.audio("word.mp3")
