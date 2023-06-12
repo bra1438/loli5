@@ -3,11 +3,8 @@ from gtts import gTTS
 
 st.title("تعليم اللغة العربية")
 
-# Load the image
-image = Image.open("ar.jpg")
-
 # Display the image
-st.image(image)
+st.image("ar.jpg", width=100%)
 
 st.title("تقسيم حروف الكلمة")
       
