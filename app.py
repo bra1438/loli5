@@ -62,4 +62,10 @@ if letter_dropdown:
             pronounce_arabic_letter_with_vowel(letter_dropdown, vowel)
 
 
+# Create a dropdownlist of Arabic letters
+arabic_letters = st.multiselect("Select an Arabic letter:", ["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر"])
 
+# If a letter is selected, print its code
+if arabic_letters:
+    for letter in arabic_letters:
+        st.write(f"The code for {letter} is {ord(letter)}")
