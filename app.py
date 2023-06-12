@@ -21,3 +21,12 @@ if letter_dropdown:
     st.write(f"لقد اخترت الحرف: {letter_dropdown}")
     for vowel in vowels:
         pronounce_arabic_letter_with_vowel(letter_dropdown, vowel)
+
+
+word = st.text_input("Enter a word in Arabic:")
+
+if word:
+    for char in word:
+        tts = gTTS(text=char, lang='ar')
+        tts.save(f"file_{char}.mp3")
+        st.audio(f"file_{char}.mp3")
