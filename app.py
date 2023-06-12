@@ -13,8 +13,7 @@ image = Image.open("ar.jpg")
 # Display the image
 st.image(image)
 
-st.title("تقسيم حروف الكلمة")
-      
+     
 word = st.text_input("اكتب الكلمة المراد تقسيمها الى احرف")
 
 if word:
@@ -28,7 +27,7 @@ if word:
       tts.save("word.mp3")
       st.audio("word.mp3")
       
-st.title("نطق الاحرف")
+st.subheader("نطق الاحرف")
       
 vowels = ["ا", "و", "ي"]
 
