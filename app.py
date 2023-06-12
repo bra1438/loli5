@@ -4,11 +4,12 @@ from gtts import gTTS
 word = st.text_input("اكتب الكلمة المراد تقسيمها اللا حروف")
 
 if word:
+    st.audio(word)
     for char in word:
         tts = gTTS(text=char, lang='ar')
         tts.save(f"file_{char}.mp3")
         st.audio(f"file_{char}.mp3")
-        st.audio(word)
+        
 
 vowels = ["ا", "و", "ي"]
 
