@@ -1,7 +1,13 @@
 import streamlit as st
 from gtts import gTTS
 
-st.title("تعليم النطق للحروف العربية")
+st.title("تعليم اللغة العربية")
+
+# Load the image
+image = Image.open("ar.jpg")
+
+# Display the image
+st.image(image)
 
 st.title("تقسيم حروف الكلمة")
       
