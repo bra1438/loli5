@@ -1,6 +1,15 @@
 import streamlit as st
 from gtts import gTTS
 
+word = st.text_input("اكتب الكلمة المراد تقسيمها اللا حروف")
+
+if word:
+    for char in word:
+        tts = gTTS(text=char, lang='ar')
+        tts.save(f"file_{char}.mp3")
+        st.audio(f"file_{char}.mp3")
+        st.audio("word")
+
 vowels = ["ا", "و", "ي"]
 
 def pronounce_arabic_letter_with_vowel(letter, vowel):
@@ -23,10 +32,4 @@ if letter_dropdown:
         pronounce_arabic_letter_with_vowel(letter_dropdown, vowel)
 
 
-word = st.text_input("Enter a word in Arabic:")
 
-if word:
-    for char in word:
-        tts = gTTS(text=char, lang='ar')
-        tts.save(f"file_{char}.mp3")
-        st.audio(f"file_{char}.mp3")
