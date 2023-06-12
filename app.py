@@ -1,5 +1,9 @@
 import streamlit as st
 from gtts import gTTS
+
+st.title("تعليم النطق للحروف العربية")
+
+st.title("تقسيم حروف الكلمة")
       
 word = st.text_input("اكتب الكلمة المراد تقسيمها الى احرف")
 
@@ -13,6 +17,8 @@ if word:
       tts.save("word.mp3")
       st.audio("word.mp3")
       
+st.title("نطق الاحرف")
+      
 vowels = ["ا", "و", "ي"]
 
 def pronounce_arabic_letter_with_vowel(letter, vowel):
@@ -20,7 +26,7 @@ def pronounce_arabic_letter_with_vowel(letter, vowel):
     tts.save(f"file_{vowel}.mp3")
     st.audio(f"file_{vowel}.mp3")
 
-st.title("تعليم النطق للحروف العربية")
+
 
 # Create a list of Arabic letters
 arabic_letters = ["ا", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"]
