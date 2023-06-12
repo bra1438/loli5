@@ -8,7 +8,7 @@ if word:
         tts = gTTS(text=char, lang='ar')
         tts.save(f"file_{char}.mp3")
         st.audio(f"file_{char}.mp3")
-        st.audio("word")
+        st.audio(word)
 
 vowels = ["ا", "و", "ي"]
 
