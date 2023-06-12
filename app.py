@@ -8,7 +8,7 @@ st.title("تعليم اللغة العربية")
 text_input = st.text_input("مرحبا اكتب اسمك هنا")
 
 # Add a button
-button = st.button("ابدا هنا")
+button = st.button("ابدا")
 
 # If the button is clicked, print the user's name
 if button:
