@@ -8,7 +8,7 @@ st.subheader('تقسيم حروف الكلمة')
 image = 'ar.jpg'
 
 # Load the image
-image = Image.open("ar.jpg", width=500)
+ st.image(image, width=500)
 
 # Display the image
 st.image(image)
