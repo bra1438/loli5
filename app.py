@@ -4,7 +4,18 @@ from PIL import Image
 
 st.title("تعليم اللغة العربية")
 
-st.subheader('تقسيم حروف الكلمة')
+# Add a text input field
+text_input = st.text_input("مرحبا اكتب اسمك هنا")
+
+# Add a button
+button = st.button("ابدا هنا")
+
+# If the button is clicked, print the user's name
+if button:
+    st.write(f"Hello, {text_input}!")
+
+
+
 image = 'ar.jpg'
 
 # Load the image
@@ -13,7 +24,7 @@ image = Image.open("ar.jpg")
 # Display the image
 st.image(image)
 
-     
+st.subheader('تقسيم حروف الكلمة')     
 word = st.text_input("اكتب الكلمة المراد تقسيمها الى احرف")
 
 if word:
