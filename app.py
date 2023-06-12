@@ -12,7 +12,7 @@ button = st.button("ابدا هنا")
 
 # If the button is clicked, print the user's name
 if button:
-    st.write(f"مرحبا بك, {text_input} سوف تتعلم معنا اساسيات اللغة العربية على القاعدة النورانية")
+    st.write(f"مرحبا بك {text_input}, سوف تتعلم معنا اساسيات اللغة العربية على القاعدة النورانية")
 
 
 
