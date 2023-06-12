@@ -38,7 +38,18 @@ if word:
           tts.save("word.mp3")
           st.audio("word.mp3")
 
-st.subheader("نطق الاحرف")
+st.subheader('نطق الأحرف')   
+# Create a dropdownlist of Arabic letters
+arabic_letters = st.multiselect("Select an Arabic letter:", ["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"])
+
+# If a letter is selected, print its code
+if arabic_letters:
+    for letter in arabic_letters:
+        tts = gTTS(text=letter, lang='ar')
+        tts.save("letter.mp3")
+        st.audio("letter.mp3")            
+            
+st.subheader("نطق الاحرف بالحركات / الفتحة - الضمة - الكسرة")
 
 vowels = ["ا", "و", "ي"]
 
@@ -62,12 +73,3 @@ if letter_dropdown:
             pronounce_arabic_letter_with_vowel(letter_dropdown, vowel)
 
 
-# Create a dropdownlist of Arabic letters
-arabic_letters = st.multiselect("Select an Arabic letter:", ["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"])
-
-# If a letter is selected, print its code
-if arabic_letters:
-    for letter in arabic_letters:
-        tts = gTTS(text=letter, lang='ar')
-        tts.save("letter.mp3")
-        st.audio("letter.mp3")
