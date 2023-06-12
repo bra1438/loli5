@@ -27,9 +27,7 @@ if letter_dropdown:
 
 word = st.text_input("اكتب الكلمة المراد تقسيمها الى احرف")
 
-tts = gTTS(text=word, lang='ar')
-    tts.save("word.mp3")
-    st.audio("word.mp3")
+
 
     for char in word:
         tts = gTTS(text=char, lang='ar')
