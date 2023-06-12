@@ -5,7 +5,7 @@ from PIL import Image
 st.title("تعليم اللغة العربية")
 
 # Load the image
-image = Image.open("ar.jpg")
+image = Image.open("ar.jpg", width=500)
 
 # Display the image
 st.image(image)
