@@ -7,15 +7,14 @@ st.title("تعليم اللغة العربية")
 # Add a text input field
 text_input = st.text_input("مرحبا اكتب اسمك هنا")
 
-# Set the style of the text input field
-st.text_input(
-    "Enter your name:",
-    style={
-        "color": "red",
-        "font-size": "20px",
-        "background-color": "blue",
-    },
-)
+# Set the background color of the app
+st.markdown("""
+<style>
+body {
+  background-color: #ffffff;
+}
+</style>
+""", unsafe_allow_html=True)
 
 
 
