@@ -11,7 +11,7 @@ text_input = st.text_input("مرحبا اكتب اسمك هنا")
 st.markdown("""
 <style>
 body {
-  background-color: #ffffff;
+  background-color: #0000FF;
 }
 </style>
 """, unsafe_allow_html=True)
