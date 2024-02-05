@@ -38,7 +38,7 @@ image = Image.open("ar.jpg")
 st.image(image)
 
 #st.subheader('تقسيم حروف الكلمة')  
-st.subheader('Diviser les lettres d'un mot') 
+st.subheader('Diviser les lettres du mot') 
 #word = st.text_input("اكتب الكلمة المراد تقسيمها الى احرف")
 word = st.text_input("Ecris le mot que tu veux diviser en lettre")
 
