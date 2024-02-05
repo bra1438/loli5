@@ -2,7 +2,8 @@ import streamlit as st
 from gtts import gTTS
 from PIL import Image
 
-st.title("تعليم اللغة العربية")
+#st.title("تعليم اللغة العربية")
+st.title("Apprendre la langue arabe")
 
 # Add a text input field
 #text_input = st.text_input("مرحبا اكتب اسمك هنا")
@@ -48,13 +49,14 @@ if word:
                   tts.save(f"file_{char}.mp3")
                   st.audio(f"file_{char}.mp3")
 
-          st.write("نطق الكلمة كاملة")
+          #st.write("نطق الكلمة كاملة")
+          st.write("Prononciation du mot en entier")
           tts = gTTS(text=word, lang='ar')
           tts.save("word.mp3")
           st.audio("word.mp3")
 
 #st.subheader('نطق الأحرف')  
-st.subheader('Pronouciation des lettres') 
+st.subheader('Prononciation des lettres') 
 # Create a dropdownlist of Arabic letters
 arabic_letters = st.multiselect("Select an Arabic letter:", ["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"])
 
@@ -66,7 +68,7 @@ if arabic_letters:
         st.audio("letter.mp3")            
             
 #st.subheader("نطق الاحرف بالحركات / الفتحة - الضمة - الكسرة")
-st.subheader("Pronouciation des lettres avec les voiyelles")
+st.subheader("Prononciation des lettres avec voyelles")
 vowels = ["ا", "و", "ي"]
 
 def pronounce_arabic_letter_with_vowel(letter, vowel):
@@ -80,7 +82,7 @@ def pronounce_arabic_letter_with_vowel(letter, vowel):
 arabic_letters = ["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"]
 
 # Create a dropdown list with the Arabic letters
-letter_dropdown = st.selectbox("اختر احد الحروف", arabic_letters)
+#letter_dropdown = st.selectbox("اختر احد الحروف", arabic_letters)
 letter_dropdown = st.selectbox("Choisir une lettre pour ecouter comment la prononcer", arabic_letters)
 
 # If a letter is selected, pronounce it with all three vowels
