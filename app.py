@@ -7,7 +7,7 @@ st.title("Apprendre la langue arabe")
 
 # Add a text input field
 #text_input = st.text_input("مرحبا اكتب اسمك هنا")
-text_input = st.text_input("Votre prenom : Zayneb / Soumaya / Abdallah")
+text_input = st.text_input("Prenom : Zayneb / Soumaya / Abdallah")
 
 # Set the background color of the app
 st.markdown("""
