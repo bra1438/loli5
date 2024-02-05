@@ -28,7 +28,7 @@ button = st.button("Commencer")
 # If the button is clicked, print the user's name
 if button:
     #st.write(f"مرحبا بك {text_input}, سوف تتعلم معنا اساسيات اللغة العربية على القاعدة النورانية")
-    st.write(f"مرحبا بك {text_input}, Tu va apprendre la langue Arabe et t'auras des surprises a chaque fois")
+    st.write(f"salam alikoum {text_input}, Tu va apprendre la langue Arabe et t'auras des surprises a chaque fois")
 
 
 image = 'ar.jpg'
