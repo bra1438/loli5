@@ -5,7 +5,8 @@ from PIL import Image
 st.title("تعليم اللغة العربية")
 
 # Add a text input field
-text_input = st.text_input("مرحبا اكتب اسمك هنا")
+#text_input = st.text_input("مرحبا اكتب اسمك هنا")
+text_input = st.text_input("Votre prenom : Zayneb / Soumaya / Abdallah")
 
 # Set the background color of the app
 st.markdown("""
@@ -24,8 +25,8 @@ button = st.button("ابدا")
 
 # If the button is clicked, print the user's name
 if button:
-    st.write(f"مرحبا بك {text_input}, سوف تتعلم معنا اساسيات اللغة العربية على القاعدة النورانية")
-
+    #st.write(f"مرحبا بك {text_input}, سوف تتعلم معنا اساسيات اللغة العربية على القاعدة النورانية")
+    st.write(f"مرحبا بك {text_input}, Tu va apprendre la langue Arabe et t'auras des surprises a chaque fois")
 
 
 image = 'ar.jpg'
@@ -36,8 +37,10 @@ image = Image.open("ar.jpg")
 # Display the image
 st.image(image)
 
-st.subheader('تقسيم حروف الكلمة')     
-word = st.text_input("اكتب الكلمة المراد تقسيمها الى احرف")
+#st.subheader('تقسيم حروف الكلمة')  
+st.subheader('Diviser les lettres d'un mot') 
+#word = st.text_input("اكتب الكلمة المراد تقسيمها الى احرف")
+word = st.text_input("Ecris le mot que tu veux diviser en lettre")
 
 if word:
           for char in word:
@@ -50,7 +53,8 @@ if word:
           tts.save("word.mp3")
           st.audio("word.mp3")
 
-st.subheader('نطق الأحرف')   
+#st.subheader('نطق الأحرف')  
+st.subheader('Pronouciation des lettres') 
 # Create a dropdownlist of Arabic letters
 arabic_letters = st.multiselect("Select an Arabic letter:", ["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "ز", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ك", "ل", "م", "ن", "ه", "و", "ي"])
 
@@ -61,8 +65,8 @@ if arabic_letters:
         tts.save("letter.mp3")
         st.audio("letter.mp3")            
             
-st.subheader("نطق الاحرف بالحركات / الفتحة - الضمة - الكسرة")
-
+#st.subheader("نطق الاحرف بالحركات / الفتحة - الضمة - الكسرة")
+st.subheader("Pronouciation des lettres avec les voiyelles")
 vowels = ["ا", "و", "ي"]
 
 def pronounce_arabic_letter_with_vowel(letter, vowel):
@@ -77,10 +81,12 @@ arabic_letters = ["أ", "ب", "ت", "ث", "ج", "ح", "خ", "د", "ذ", "ر", "�
 
 # Create a dropdown list with the Arabic letters
 letter_dropdown = st.selectbox("اختر احد الحروف", arabic_letters)
+letter_dropdown = st.selectbox("Choisir une lettre pour ecouter comment la prononcer", arabic_letters)
 
 # If a letter is selected, pronounce it with all three vowels
 if letter_dropdown:
         st.write(f"لقد اخترت الحرف: {letter_dropdown}")
+        st.write(f"Tu as choisi la lettre: {letter_dropdown}")
         for vowel in vowels:
             pronounce_arabic_letter_with_vowel(letter_dropdown, vowel)
 
